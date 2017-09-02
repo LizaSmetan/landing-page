@@ -118,6 +118,7 @@ blockquote span{
 	letter-spacing: .2em;
 	color: #777;
 	box-shadow: none;
+	font-weight: 300;
 }
 .form-group{
 	margin-bottom: 10px;
@@ -173,6 +174,7 @@ textarea.form-control{
 }
 .logo{
 	float: left;
+    padding: 6px 0;
 }
 .header-nav{
 	color: rgba(255, 255, 255, 0.75);
@@ -266,6 +268,11 @@ textarea.form-control{
 	color: #111;
 	top: 5px;
 	left: 5px;
+}
+@media(max-width: 1200px){
+	.inner{
+		padding: 20px 0;
+	}
 }
 @media(max-width: 991px){
 	.inner-content h6{
@@ -373,7 +380,7 @@ textarea.form-control{
 .nav-tabs li .icon{
 	font-size: 48px;
 }
-.tab-content .tab-pane{
+.tab-content{
 	padding-top: 70px;
 }
 @media(max-width: 991px){
@@ -383,6 +390,9 @@ textarea.form-control{
 	}
 	.tab-content .tab-pane{
 		padding-top: 50px;
+	}
+	.tab-content{
+		padding-top: 10px;
 	}
 }
 @media(max-width: 780px){
@@ -395,7 +405,7 @@ textarea.form-control{
 }
 @media(max-width: 680px){
 	.nav-tabs>li{
-		width: 33.33%;
+		width: 50%;
 		margin-bottom: 15px;
 	}
 	.tab-content .tab-pane{
@@ -453,11 +463,8 @@ textarea.form-control{
 	color: #777;
 	font-weight: 300;
 }
-.portfolio-nav{
-	font-size: 13px;
-	text-transform: uppercase;
-	letter-spacing: 0.4em;
-	margin-bottom: 43px;
+.portfolio-tabs{
+	margin-top: 35px;
 }
 .portfolio-tabs>.nav-tabs>li{
 	width: 25%;
@@ -472,38 +479,48 @@ textarea.form-control{
 	width: 33.33%;
 }
 .portfolio-item-img{
-	padding: 7px;
+	padding: 4px;
 }
 .portfolio-item-img img{
-	height: 100%;
 	width: 100%;
 }
-@media(max-width: 720px){
-	.portfolio-tabs>ul{
-		width: 500px;
-	}
-	.nav-tabs li .portfolio-tabs-title{
-		font-size: 14px;
-	}
+.portfolio-tabs-title{
+	display: block;
+	font-size: 13px;
+	letter-spacing: .4em;
+	font-family: "Dosis", sans-serif;
+	font-weight: 400;
+	font-variant: small-caps;
+	text-transform: uppercase;
 }
-@media(max-width: 520px){
+@media(max-width: 768px){
 	.portfolio-tabs>ul{
-		width: 280px;
-	}
-	.nav-tabs li .portfolio-tabs-title{
-		font-size: 9px;
+		width: auto;
 	}
 	.portfolio-col{
 		width: 50%;
 	}
+	.portfolio-tabs>.nav-tabs>li{
+		width: 50%;
+		margin-bottom: 10px;
+	}
+}
+@media(max-width: 600px){
+	.portfolio-col{
+		width: 100%;
+	}
 	.portfolio p{
 		margin-bottom: 15px;
+	}
+	.portfolio-tabs>.nav-tabs>li{
+		width: 100%;
 	}
 }
 .question{
 	background-color: #111111;
-	margin: 0 -15px;
 	height: 218px;
+	display: inline-block;
+    width: 100%;
 }
 .question::before{
     content:"";
@@ -563,6 +580,7 @@ textarea.form-control{
 }
 .reviews .carousel-caption{
 	position: static;
+	padding: 0 60px;
 }
 .reviews .carousel-caption .title{
 	margin-bottom: 40px;
@@ -648,6 +666,9 @@ textarea.form-control{
 	right: -20px;
 }
 @media(max-width: 678px){
+	.reviews .carousel-caption{
+		padding: 0 40px;
+	}
 	.reviews .carousel-caption p{
 		font-size: 14px;
 		margin: 0 10px;
@@ -730,6 +751,9 @@ textarea.form-control{
 	display: inline-block;
 	float: left;
 	position: relative;
+	margin-right: 15px;
+	width: 35px;
+	height: 35px;
 }
 .contact-icon::before{
 	content: "";
@@ -747,9 +771,6 @@ textarea.form-control{
 	transform: translateX(5%) translateY(100%);
     width: 30px;
     text-align: center;
-}
-.contact-item-info{
-	margin-left: 50px;
 }
 .contact-item-info span{
 	font-size: 12px;
@@ -787,12 +808,12 @@ textarea.form-control{
 .form-submit .form-info-text{
 	line-height: 35px;
 }
-@media(max-width: 800px){
+@media(max-width: 768px){
 	.subscribe input[name="email"]{
 		width: 100%;
 	}
 	.contact-item{
-		margin: 0 0 15px 40px;
+		margin: 0 0 35px 40px;
 	}
 	.form-col{
 		width: 100%;
@@ -838,7 +859,7 @@ textarea.form-control{
 }
 .map-icon i{
 	font-size: 15px;
-	transform: rotate(-45deg);
+	transform: rotate(-45deg) translateX(-1px);
 }
 .on-map-text{
 	color: rgba(255, 255, 255, .75);
@@ -883,7 +904,7 @@ textarea.form-control{
     transform: translateX(-25%) translateY(15%) rotate(45deg);
 	height: 25px;
     width: 25px;
-    border: 2px #111 solid;
+    border: 1px #111 solid;
     border-radius: 2px;
 }
 .footer-name{
